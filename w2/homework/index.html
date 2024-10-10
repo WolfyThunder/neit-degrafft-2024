@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W2D2 | I</title>
+</head>
+<body>
+    <!--Main content of the site-->
+    <div>
+        <div>
+            <button id="trigger-button">Trigger</button>
+            <span id="trigger-display"></span>
+        </div>
+        
+
+        <!--Control and output for the "reload" functionality-->
+        <div>
+            <button id="reload-button">Reload</button>
+            <span id="reload-display"></span>
+        </div>
+    </div>
+
+    <!--IN-DOCUMENT JAVASCRIPT BELOW-->
+    <script>
+
+        //in here we now write Javascript
+        //this is a single line comment
+
+        /*
+        
+            this is a multi line comment
+
+        */
+        
+        var triggerButton
+
+        triggerButton = document.querySelector(`#trigger-button`)
+
+        var triggerDisplay = document.querySelector(`#trigger-display`)
+        var reloadButton = document.querySelector(`#reload-button`)
+        var reloadDisplay = document.querySelector(`#reload-display`)
+
+        console.log(triggerButton)
+
+        var max = 6
+        var currentAmmo = max
+        var inventory = 10
+
+        triggerDisplay.innerHTML = `AMMO: ${currentAmmo}`
+        reloadDisplay.innerHTML = `INVENTORY: ${inventory}`
+
+        triggerButton.addEventListener(`click`, shoot)
+
+        function shoot(event)
+        {
+            currentAmmo = currentAmmo - 1
+            if(currentAmmo < 0)
+            {
+                currentAmmo = 0
+            }
+            triggerDisplay.innerHTML = `AMMO: ${currentAmmo}`
+        }
+
+        reloadButton.addEventListener(`click`, reload)
+
+        function reload(event)
+        {
+
+            inventory = inventory - 1
+            if(inventory < 0)
+            {
+                inventory = 0
+            }
+            reloadDisplay.innerHTML = `INVENTORY: ${inventory}`
+
+            currentAmmo = currentAmmo + 1
+            if(currentAmmo < 0)
+            {
+                currentAmmo = 0
+            }
+            triggerDisplay.innerHTML = `AMMO: ${currentAmmo}`
+        }
+
+    </script>
+</body>
+</html>
