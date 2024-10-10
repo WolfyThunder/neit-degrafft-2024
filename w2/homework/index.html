@@ -75,10 +75,11 @@
             reloadDisplay.innerHTML = `INVENTORY: ${inventory}`
 
             currentAmmo = currentAmmo + 6
-            if(currentAmmo < 6)
+            if(currentAmmo > 6)
             {
                 currentAmmo = 6
             }
+            
             triggerDisplay.innerHTML = `AMMO: ${currentAmmo}`
         }
 
