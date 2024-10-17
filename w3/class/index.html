@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 HTML</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #0439f9;">
+Your browser does not support the HTML canvas tag.
+</canvas>
+
+  <script>
+    var c = document.getElementById("myCanvas")
+    var line = c.getContext("2d")
+    line.moveTo(0,0)
+    line.lineTo(200,100)
+    line.strokeStyle = "rgb(255, 0, 0)"
+    line.stroke()
+
+    var triangle = c.getContext("2d")
+    triangle.beginPath()
+    triangle.moveTo(100,50)
+    triangle.lineTo(200,100)
+    triangle.lineTo(0,100)
+    triangle.lineTo(100,50)
+    triangle.strokeStyle = "green"
+    triangle.fillStyle = "blue"
+    triangle.stroke()
+    triangle.fill()
+    triangle.closePath()
+  </script>
+        
+</body>
+</html>
