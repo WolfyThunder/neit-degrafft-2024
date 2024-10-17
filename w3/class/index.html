@@ -30,6 +30,38 @@ Your browser does not support the HTML canvas tag.
     triangle.stroke()
     triangle.fill()
     triangle.closePath()
+
+    var rectangle = c.getContext("2d")
+    rectangle.beginPath()
+    rectangle.moveTo(85,75)
+    rectangle.lineTo(105,75)
+    rectangle.lineTo(105,85)
+    rectangle.lineTo(85,85)
+    rectangle.lineTo(85,75)
+    rectangle.fillStyle = "purple"
+    rectangle.strokeStyle = "#ffffff"
+    rectangle.fill()
+    rectangle.stroke()
+    rectangle.closePath()
+
+    var newRectangle = c.getContext("2d")
+    newRectangle.beginPath()
+    newRectangle.rect(20,20,25,25)
+    newRectangle.strokeStyle = "black"
+    newRectangle.stroke()
+    newRectangle.closePath()
+    
+    var ctx = c.getContext("2d")
+    ctx.beginPath()
+    ctx.arc(175,25,10,0,2 * Math.PI)
+    ctx.strokeStyle = "yellow"
+    ctx.fillStyle = "yellow"
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+    
+
+    
   </script>
         
 </body>
