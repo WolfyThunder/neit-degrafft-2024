@@ -41,3 +41,34 @@ circle.lineWidth = 5
 circle.fill()
 circle.stroke()
 circle.closePath()
+
+var star = canvas.getContext("2d")
+
+star.beginPath()
+star.moveTo(635,496)
+star.lineTo(668,554)
+star.lineTo(733,567)
+star.lineTo(689,615)
+star.lineTo(696,681)
+star.lineTo(635,654)
+star.lineTo(575,681)
+star.lineTo(583,615)
+star.lineTo(538,567)
+star.lineTo(603,554)
+star.lineTo(635,496)
+star.fillStyle = "#ffff00"
+star.strokeStyle = "rgb(32,32,32)"
+star.lineWidth = 5
+star.fill()
+star.stroke()
+star.closePath()
+
+var line = canvas.getContext("2d")
+
+line.beginPath()
+line.moveTo(85,682)
+line.lineTo(278,549)
+line.strokeStyle = "rgb(255, 0, 0)"
+line.lineWidth = 5
+line.stroke()
+line.closePath()
