@@ -105,6 +105,7 @@ function main()
         /*----------INSTRUCTION------------
         increase the score by one
         -----------------------------------*/
+        score ++
     }
 
     for(var i=0; i<pickups.length; i++)
@@ -112,7 +113,12 @@ function main()
         /*----------INSTRUCTION------------
         make the avatar "collect" the pickups and increase the score
         -----------------------------------*/
+        if(pickups[i].overlaps(avatar))
+        {
+            pickups[i].x = 1000;
         
+            score ++
+        }
         pickups[i].render();
     }
 
@@ -122,13 +128,17 @@ function main()
    /*--------------text----------------*/
    //makes the text center aligned instead of left aligned
    ctx.textAlign = `center`;
-
+   ctx.textAlign = `left`;
     /*----------INSTRUCTION------------
     Set the context's font property to use 64px Arial 
     Draw the score on the canvas using the fillText() method
     HINT: You will have to research how this works 
     W3schools.com and your book can help
     -----------------------------------*/
+    
+    ctx.fillText(`Score ${score}`, 0, 50)
+    ctx.font=(`64px Arial`)
+    
 }
 
 //random number generator
