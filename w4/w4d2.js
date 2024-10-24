@@ -2,7 +2,7 @@ var name = `Katie`
 
 var htmlNames = [
     `Loki`,       // 0
-    `Abigail` ,   // 1
+    `Abigail`,   // 1
     `Andrew`      // 2
 ]
 
