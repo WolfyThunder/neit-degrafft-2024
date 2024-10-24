@@ -13,7 +13,7 @@ var timer = setInterval(main, fps)
 /*-------------INSTRUCTION--------------
 Create variable calledd score to store amount of "pickups" collected
 ---------------------------------------*/
-
+var score = 0
 /*--------------avatar------------
 avatar is the "player controllable" Object
 -----------------------------------*/
@@ -112,7 +112,7 @@ function main()
         /*----------INSTRUCTION------------
         make the avatar "collect" the pickups and increase the score
         -----------------------------------*/
-       
+        
         pickups[i].render();
     }
 
